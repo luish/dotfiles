@@ -1,0 +1,95 @@
+# Use Xft?
+use_xft yes
+#xftfont cure:size=6.5
+xftfont Sans:size=7
+
+# Update interval in seconds
+update_interval 1
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+#own_window yes
+#own_window_type widget
+#own_window_transparent no
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+own_window_class Conky
+own_window yes
+own_window_transparent no
+own_window_hints ,sticky,skip_taskbar,skip_pager
+#own_window_type desktop
+own_window_type panel
+own_window_colour 464139
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+default_bar_size 3 3
+
+# Minimum size of text area
+minimum_size 1676 1
+
+maximum_width 1676
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+#window.border_inner_margin 0
+
+# border width
+border_width 0
+
+# Default colors and also border colors
+default_color E0DCD6
+default_shade_color white
+default_outline_color black
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_left
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 0
+gap_y 4
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase yes
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+#cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+#net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer right
+
+#/ Wan ${execi 100800 curl -s http://labs.luishenrique.org/php/ip.php}  
+#
+
+TEXT
+${image /home/lh/.conky/conky_bg.png -s 1680x21} ${time %A %d}  ::  Kernel $kernel  ::  Uptime $uptime_short  ::  Mem $mem ::  Lan ${addr eth0}  ::  Down (${totaldown eth0}) ${downspeed eth0}  ::  Up ${upspeed eth0}  ::  / ${fs_free /} /dados ${fs_free /dados}${alignr}${mpd_smart} ${mpd_bar 6,150} ${mpd_elapsed}/${mpd_length} 
