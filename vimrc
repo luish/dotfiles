@@ -9,10 +9,10 @@ set ai " auto indent
 set si "smart indent
 set hlsearch " highlight search
 
-set shiftwidth=4 "se mudar o valor eu te mato :-P, numero de espaço usado quando rolar o autoindent"
-set softtabstop=4 "se mudar aqui, tb te mato! numero de espaços que deve-se dar quando apertar o TAB"
-set tabstop=4 "por favor, também nao mude isso! numero de espações que deve-se voltando quando apertar o backspace num tab"
-set bs=2 "para o backspace se comportar como a gente gosta"
+set shiftwidth=4
+set softtabstop=4 
+set tabstop=4
+set bs=2 
 """"""""
 
 " highlight linha
@@ -24,8 +24,11 @@ set fdm=marker
 
 set wildmode=longest,list "para completar com TAB igualzinho o bash faz"
 
+" Load sparkup for html
+autocmd FileType xhtml,html,xml,markdown silent source ~/.vim/ftplugin/html/sparkup.vim
+
 " pydiction plugin
-let g:pydiction_location = '/home/lh/.vim/after/ftplugin/pydiction/complete-dict'
+let g:pydiction_location = '~/.vim/after/ftplugin/pydiction/complete-dict'
 
 
 " When started as "evim", evim.vim will already have done these settings.
