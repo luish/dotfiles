@@ -88,8 +88,5 @@ override_utf8_locale yes
 # Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer right
 
-#/ Wan ${execi 100800 curl -s http://labs.luishenrique.org/php/ip.php}  
-#
-
 TEXT
 ${image /home/lh/.conky/conky_bg.png -s 1680x21} ${time %A %d}  ::  Kernel $kernel  ::  Uptime $uptime_short  ::  Mem $mem ::  Lan ${addr eth0}  ::  Down (${totaldown eth0}) ${downspeed eth0}  ::  Up ${upspeed eth0}  ::  / ${fs_free /} /dados ${fs_free /dados}${alignr}${mpd_smart} ${mpd_bar 6,150} ${mpd_elapsed}/${mpd_length} 
