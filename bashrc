@@ -136,8 +136,7 @@ pacsearch () {
 
 # do my work more fast
 
-alias compjr_db="mysql -u compjunior -pcmpjnr321"
-alias compjr_dbestoque="mysql -h 72.29.70.171 -u compjuni_estoque -pestoque compjuni_estoque"
+alias msql="mysql -u luish -pmy_password"
 alias gmailcheck="perl ~/.conky/scripts/gmail.pl s"
 alias www="cd /srv/http"
 alias t=todo.sh
